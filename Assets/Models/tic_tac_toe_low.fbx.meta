@@ -11,22 +11,37 @@ ModelImporter:
     100006: O
     100008: //RootNode
     100010: X
+    100012: Grid_Low
+    100014: O_Low
+    100016: X_Low
     400000: Camera
     400002: Grid
     400004: Lamp
     400006: O
     400008: //RootNode
     400010: X
+    400012: Grid_Low
+    400014: O_Low
+    400016: X_Low
     2000000: Camera
     2300000: Grid
     2300002: O
     2300004: X
+    2300006: Grid_Low
+    2300008: O_Low
+    2300010: X_Low
     3300000: Grid
     3300002: O
     3300004: X
+    3300006: Grid_Low
+    3300008: O_Low
+    3300010: X_Low
     4300000: X
     4300002: O
     4300004: Grid
+    4300006: X_Low
+    4300008: O_Low
+    4300010: Grid_Low
     10800000: Lamp
   externalObjects:
   - first:
