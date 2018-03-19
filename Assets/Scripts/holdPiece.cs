@@ -16,11 +16,14 @@ public class holdPiece : MonoBehaviour {
 	public float gravityFactor = 10.0f;
 	private Vector3 forceDirection;
 
+	private Vector3 forwardDir;
+
     // Use this for initialization
     void Start () {
 		
 	}
 	public void grabPiece(GameObject selectedPiece) {
+		
         if (selectedPiece.GetComponent<PlayerPiece>().hasBeenPlayed == false) {
             pieceBeingHeld = selectedPiece;
             holdingPiece = true;
@@ -63,12 +66,15 @@ public class holdPiece : MonoBehaviour {
 
 	void FixedUpdate () {
 		if (GameLogic.GetComponent<GameLogic>().playerTurn == true) {
+			
 			if (holdingPiece == true) {
-				Vector3 forwardDir = raycastHolder.transform.TransformDirection(Vector3.forward) * 100;
-				Debug.DrawRay(raycastHolder.transform.position, forwardDir, Color.green);
+				
+				forwardDir = raycastHolder.transform.TransformDirection(Vector3.forward) * 100;
+				//Debug.DrawRay(raycastHolder.transform.position, forwardDir, Color.green);
 
 
 				if (Physics.Raycast(raycastHolder.transform.position, (forwardDir), out hit)) {
+					
 					gravityAttractor.transform.position = new Vector3(hit.point.x, hit.point.y + hoverHeight, hit.point.z);
 
 
